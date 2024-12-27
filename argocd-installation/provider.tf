@@ -8,7 +8,7 @@ terraform {
   required_providers {
     helm = {
         source = "hashicorp/helm"
-        version = "3.16.4"
+        version = "= 3.16.4"
     }
   }
 }
