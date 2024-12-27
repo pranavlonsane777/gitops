@@ -1,0 +1,6 @@
+#ignore tf dir
+.terraform/
+#ignore state and lock files
+.tfstate
+.tfstate.*
+.lock.hcl
