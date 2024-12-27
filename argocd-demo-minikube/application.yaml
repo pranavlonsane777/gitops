@@ -3,18 +3,18 @@ kind: Application
 metadata:
   name: myapp-argocd
   namespace: argocd
-  spec:
-    project: default
-    source:
-      repoURL: https://github.com/pranavlonsane777/gitops.git
-      targetRevision: HEAD
-      path: argocd-demo-minikube
-    destination:
-      server: https://kubernetes.default.svc
-      namespace: myapp
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
-      syncOptions:
-        - CreateNamespace=true
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/pranavlonsane777/gitops.git
+    targetRevision: HEAD
+    path: argocd-demo-minikube
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: myapp
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
